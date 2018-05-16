@@ -1,9 +1,16 @@
 package com.selva.sample.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Message {
 
     private String id;
     private String text;
+
+    public Message(){
+
+    }
 
     public Message(String id, String text) {
         this.id = id;
